@@ -1,11 +1,24 @@
 import React, {useState} from "react";
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-
+import Modal from "react-modal";
+import MovieContent from "./movieContent.js"
 import './movieRow.css';
 
 export default ({title, items}) => {
     const [scrollx, setScrollx] = useState(0)
+    const [isOpen, setIsOpen] = useState(false)
+    const [movieSelect, setMovieSelect] = useState([])
+
+    function handleModal(movie){
+        setIsOpen(!isOpen);
+        let list = movie
+        setMovieSelect(list)
+    }
+
+    function closeModal(){
+        setIsOpen(false);
+    }
 
     const handleLeftArrow = () => {
         let x = scrollx + Math.round(window.innerWidth/2);
@@ -23,7 +36,6 @@ export default ({title, items}) => {
         }
         setScrollx(x);
     }
-
 
     return(
         <div className="lista">
@@ -44,11 +56,22 @@ export default ({title, items}) => {
                     }}>
                     {items.results.length > 0 && items.results.map((item, key) =>(
                         <div key={key} className="movieRow--item">
-                        <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
+                            <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} onClick = {() => handleModal(item)}/>
                         </div>
                     ))}
                 </div>
             </div>
+
+            <Modal
+                isOpen = {isOpen}
+                onRequestClose = {closeModal}
+                contentLabel= "aaaaa"
+                overlayClassName= "modal-overlay"
+                className= "modal-content"
+            >
+                <MovieContent movie={movieSelect} onClick = {() => closeModal()}/>
+            </Modal>
+            {/* <Modal isOpen={isOpen} movie={movieSelect}/> */}
         </div>
     )
 }

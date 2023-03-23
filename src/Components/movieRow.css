@@ -42,3 +42,25 @@ img{
 .movieRow--right{
     right: 0;
 }
+
+.modal-overlay{
+        position: fixed;
+        background-Color: rgb(0,0,0,0.7);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 15
+}
+
+.modal-content{
+    max-width: 50%;
+    max-height: 90%;
+    border-radius: 20px;
+    border: none;
+}
