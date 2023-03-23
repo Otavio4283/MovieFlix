@@ -1,0 +1,21 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+
+/*config carrosel */
+
+.movieRow--listarea{
+    overflow-x: hidden;
+}
+
+.movieRow--list{
+    width: 9999px;
+}
+
+.movieRow--item{
+    transform: scale(0.9);
+    display: inline-block;
+    width: 125px;
+    height: 180px;
+}
