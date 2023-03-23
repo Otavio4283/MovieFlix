@@ -5,12 +5,12 @@ img{
 
 /*config carrosel */
 
-.movieRow--listarea{
-    overflow-x: hidden;
+.movieRow--list{
+    transition: all ease 0.5s;
 }
 
-.movieRow--list{
-    width: 9999px;
+.movieRow--listarea{
+    overflow-x: hidden;
 }
 
 .movieRow--item{
@@ -18,4 +18,27 @@ img{
     display: inline-block;
     width: 125px;
     height: 180px;
+}
+
+.movieRow--left, .movieRow--right{
+    transform: scale(0.9);
+    position: absolute;
+    width: 40px;
+    height: 180px;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow-x: hidden;
+
+}
+
+.movieRow--left{
+    left: 0;
+}
+
+.movieRow--right{
+    right: 0;
 }
