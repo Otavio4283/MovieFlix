@@ -22,6 +22,13 @@ function App() {
   
   return (
     <div className='home-page'>
+    <header><Link to="Login"><button>Entrar</button></Link></header>
+      <section className="lists">
+      <main>
+        <Routes>
+          <Route path="Login" component={Login}/>
+        </Routes>
+      </main>
       <NaveBar fullwidth/>
       <section className="lists">
         {movieList.map((item, key) => (
