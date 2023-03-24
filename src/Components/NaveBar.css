@@ -2,13 +2,13 @@ nav {
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
-  width: 100%;
   height: 81px;
-  padding: 0 3%;
+  padding: 0px 3%;
   left: 0px;
   top: 0px;
-  right: 0;
+  right: 0px;
   z-index: 10;
   background: #0a2749;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -30,47 +30,20 @@ nav {
   line-height: 24px;
 }
 
-nav .links {
-  margin-left: 5em;
-  margin-right: 7em;
-  width: 327px;
-  height: 100%;
-  position: initial;
-
-  display: flex;
+.links{
   align-items: center;
+}
+.categories{
+  display: flex;
+  list-style-type: none;
+}
+.categories li{
   justify-content: space-between;
-
-  font-weight: 700;
-  font-size: 20px;
+  margin-right: 5em; 
+  font-size:  22px;
 }
-
-nav .links li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-nav .links a {
-  margin: 2em;
-}
-
-.search {
-  position: absolute;
-  width: 375px;
-  height: 51px;
-  left: 906px;
-  top: 15px;
-
-  background-color: #8B8B8B;
-  border-radius: 10px;
-}
-
-.search_icon {
-  position: absolute;
-  width: 0.5em;
-  height: 0.5em;
-  left: 0.5em;
-  top: 0.65em;
-  justify-content: center;
+.categories li:hover{
+  color: black;
+  transition: .4s;
+  cursor: pointer;
 }
