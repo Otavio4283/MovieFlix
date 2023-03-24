@@ -23,6 +23,13 @@ function App() {
   return (
     <div className='home-page'>
       <NaveBar></NaveBar>
+      <header><Link to="Login"><button>Entrar</button></Link></header>
+      <section className="lists">
+      <main>
+        <Routes>
+          <Route path="Login" component={Login}/>
+        </Routes>
+      </main>
       <section className="lists">
         {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} items={item.items}/>
