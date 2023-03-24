@@ -65,3 +65,12 @@ nav .links a {
   background-color: #8B8B8B;
   border-radius: 10px;
 }
+
+.search_icon {
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  left: 0.5em;
+  top: 0.65em;
+  justify-content: center;
+}
