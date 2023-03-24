@@ -2,7 +2,10 @@ body{
   background: rgb(6,51,92);
   background: linear-gradient(180deg, rgba(6,51,92,1) 0%, rgba(52,9,95,1) 100%);
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.lists{
+  margin-top: 30rem;
 }
