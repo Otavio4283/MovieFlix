@@ -18,6 +18,7 @@ img{
     display: inline-block;
     width: 125px;
     height: 180px;
+    transition: all 0.5s;
 }
 
 .movieRow--left, .movieRow--right{
@@ -32,7 +33,8 @@ img{
     justify-content: center;
     cursor: pointer;
     overflow-x: hidden;
-
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .movieRow--left{
@@ -61,6 +63,41 @@ img{
 .modal-content{
     max-width: 50%;
     max-height: 90%;
+    padding: 0;
     border-radius: 20px;
     border: none;
+}
+
+.modal-content:enabled{
+    
+}
+
+p{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5%;
+    padding-top: 0px;
+    margin: 0;
+    font-size: 12px;
+    text-align: justify;
+}
+
+h2{
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.movieRow--item:hover{
+    transform: scale(1);
+}
+
+.lista:hover .movieRow--left,
+.lista:hover .movieRow--right{
+    opacity: 1;
+}
+
+.modal--close{
+    position: fixed;
+    top: 10%;
+    right: 27%;
 }

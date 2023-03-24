@@ -3,6 +3,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 import Modal from "react-modal";
 import MovieContent from "./movieContent.js"
+import CancelIcon from '@material-ui/icons/Cancel';
 import './movieRow.css';
 
 export default ({title, items}) => {
@@ -62,16 +63,10 @@ export default ({title, items}) => {
                 </div>
             </div>
 
-            <Modal
-                isOpen = {isOpen}
-                onRequestClose = {closeModal}
-                contentLabel= "aaaaa"
-                overlayClassName= "modal-overlay"
-                className= "modal-content"
-            >
+            <Modal isOpen = {isOpen} onRequestClose = {closeModal} contentLabel= "movie-info" overlayClassName= "modal-overlay" className= "modal-content">
                 <MovieContent movie={movieSelect} onClick = {() => closeModal()}/>
+                <CancelIcon className="modal--close" onClick={closeModal}/>
             </Modal>
-            {/* <Modal isOpen={isOpen} movie={movieSelect}/> */}
         </div>
     )
 }

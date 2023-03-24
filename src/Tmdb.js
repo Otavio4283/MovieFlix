@@ -21,29 +21,6 @@ const basicFetch = async (endpoint) => {
 export default {
     getHomeList: async () => {
         return [
-           //Todas as requisições serão feitas por meio desse arquivo
-
-const API_KEY = '84c2e94e58561d2845fbf2de10a1a1a5';
-const API_BASE =  'https://api.themoviedb.org/3';
-
-/*
-- Mais assistidos
-- Proximos lançamentos
-- Ação
-- Comédia
-- Terror
-*/
-
-//O await faz a função esperar a resposta do request para poder continuar executando o codigo
-const basicFetch = async (endpoint) => {
-    const req = await fetch(`${API_BASE}${endpoint}`);
-    const json = await req.json();
-    return json;
-}
-
-export default {
-    getHomeList: async () => {
-        return [
             {
                 slug: 'trending',
                 title:'Em alta',
@@ -70,9 +47,6 @@ export default {
                 title:'Comédia',
                 items:await basicFetch(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
             }
-        ];
-    }
-}
         ];
     }
 }

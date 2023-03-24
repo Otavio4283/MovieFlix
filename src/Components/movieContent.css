@@ -14,13 +14,22 @@
     border-top-right-radius: 20px;
 }
 
-.modal--close{
-    position: fixed;
-    display: flex;
-    right: 26%;
-    color: rgba(4, 4, 4, 0.63);;
-}
-
 h1{
     z-index: 100;
+}
+
+.modal--links{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+
+.modal--button{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: solid 1.5px white;
+    border-radius: 10px;
+    font-size: 12px;
 }
