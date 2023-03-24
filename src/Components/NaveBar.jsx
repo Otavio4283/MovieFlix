@@ -1,23 +1,38 @@
-import {React} from 'react';
-import './NaveBar.css'
-import SearchIcon from '@mui/icons-material/Search';
-import Button from '@mui/material/Button';
+import { React } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./NaveBar.css";
+import Button from "@mui/material/Button";
+import SearchAppBar from './SearchBar';
 
-export default function NaveBar () {
+export default function NaveBar() {
   return (
     <nav>
-      <div className='main_name'>MovieFlix</div>
-      <Button className='login_button'  style={{ borderWidth: '3px', borderColor: 'white', color: 'white', fontWeight:'bold', left: '78%', fontSize:'17px', justifyContent:'center', alignItems:'center' }} variant="outlined">LOGIN</Button>
+      <div className="main_name">MovieFlix</div>
       <div class="links">
-        <ul class='categories'>
-          <il><a href='#acao'></a>Ação</il>
-          <il><a href='#terror'></a>Terror</il>
-          <il><a href='#comedia'></a>Comédia</il>
+        <ul class="categories">
+          <li>Ação</li>
+          <li>Terror</li>
+          <li>Comédia</li>
         </ul>
-        <div className='search'>
-          <SearchIcon className='search_icon'/>
-        </div>
       </div>
+      <div className="search">
+          <SearchAppBar/>
+      </div>
+      <Button
+        className="login_button"
+        style={{
+          borderWidth: "3px",
+          borderColor: "white",
+          color: "white",
+          fontWeight: "bold",
+          fontSize: "17px",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        variant="outlined"
+      >
+        LOGIN
+      </Button>
     </nav>
-  )
+  );
 }
