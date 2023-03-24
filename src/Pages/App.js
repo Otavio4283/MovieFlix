@@ -3,6 +3,8 @@ import Tmdb from '../Tmdb';
 import React, {useEffect, useState} from 'react';
 import MovieRow from '../Components/movieRow';
 import NaveBar from '../Components/NaveBar';
+import {Routes,Route,Link} from 'react-router-dom';
+
 
 function App() {
   
