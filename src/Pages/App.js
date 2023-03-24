@@ -2,6 +2,7 @@ import './App.css';
 import Tmdb from '../Tmdb';
 import React, {useEffect, useState} from 'react';
 import MovieRow from '../Components/movieRow';
+import NaveBar from '../Components/NaveBar';
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
   
   return (
     <div className='home-page'>
+      <NaveBar fullwidth/>
       <section className="lists">
         {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} items={item.items}/>
